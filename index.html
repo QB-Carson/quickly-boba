@@ -3,48 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boba Bliss</title>
+    <title>Quickly Boba - Premium Bubble Tea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Boba Bliss</div>
-            <ul>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">Quickly Boba</a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#locations">Locations</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#order">Order Now</a></li>
+                <li><a href="#order" class="btn-nav">Order Now</a></li>
             </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
-    
+
     <section class="hero">
-        <h1>Freshly Brewed, Always Delicious</h1>
-        <p>Sip into happiness with our handcrafted boba tea.</p>
-        <a href="#menu" class="cta-button">View Menu</a>
+        <div class="hero-content">
+            <h1>Premium Boba, Made Quickly</h1>
+            <p>Freshly crafted bubble tea with the perfect chew</p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
     </section>
-    
-    <section id="menu">
-        <h2>Our Favorites</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="taro-boba.jpg" alt="Taro Boba">
-                <h3>Taro Milk Tea</h3>
+
+    <section id="menu" class="menu">
+        <h2>Our Signature Drinks</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="images/milk-tea.jpg" alt="Classic Milk Tea" loading="lazy">
+                <h3>Classic Milk Tea</h3>
+                <p>Our original recipe with black tea and creamy milk</p>
             </div>
-            <div class="menu-item">
-                <img src="matcha-boba.jpg" alt="Matcha Boba">
-                <h3>Matcha Latte</h3>
+            <div class="item">
+                <img src="images/fruit-tea.jpg" alt="Tropical Fruit Tea" loading="lazy">
+                <h3>Tropical Fruit Tea</h3>
+                <p>Refreshing blend of seasonal fruits</p>
             </div>
-            <div class="menu-item">
-                <img src="brown-sugar-boba.jpg" alt="Brown Sugar Boba">
-                <h3>Brown Sugar Boba</h3>
+            <div class="item">
+                <img src="images/smoothie.jpg" alt="Mango Smoothie" loading="lazy">
+                <h3>Mango Smoothie</h3>
+                <p>Creamy mango with chewy boba pearls</p>
             </div>
         </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Boba Bliss. All Rights Reserved.</p>
+
+    <section id="locations" class="locations">
+        <div class="locations-container">
+            <h2>Find Us</h2>
+            <p>Enter your location to find the nearest Quickly Boba</p>
+            <div class="search-box">
+                <input type="text" id="location-input" placeholder="City or ZIP code">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="location-results" class="location-results"></div>
+        </div>
+    </section>
+
+    <section id="order" class="order-cta">
+        <h2>Ready for some boba?</h2>
+        <a href="order.html" class="btn">Order Online</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Quickly Boba</div>
+            <div class="footer-links">
+                <a href="#">Careers</a>
+                <a href="#">Franchise</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><span>IG</span></a>
+                <a href="#" aria-label="Facebook"><span>FB</span></a>
+                <a href="#" aria-label="TikTok"><span>TT</span></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> Quickly Boba. All rights reserved.</p>
     </footer>
 </body>
 </html>
