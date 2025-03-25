@@ -3,48 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boba Bliss</title>
+    <title>Quickly Boba - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+        header {
+            background: transparent;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: #9b59b6; /* Purple color */
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links a:hover {
+            color: #8e44ad; /* Darker Purple */
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?boba') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background: #9b59b6; /* Purple color */
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #8e44ad; /* Darker Purple */
+        }
+        .menu {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+        .menu h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+        .item {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .item:hover {
+            transform: scale(1.05);
+        }
+        .locations {
+            padding: 80px 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        input {
+            padding: 12px;
+            border: 2px solid #9b59b6; /* Purple color */
+            border-radius: 5px;
+            width: 250px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 12px 20px;
+            background: #9b59b6; /* Purple color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #8e44ad; /* Darker Purple */
+        }
+        footer {
+            background: #9b59b6; /* Purple color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="logo">Boba Bliss</div>
-            <ul>
+            <div class="logo">Quickly Boba</div>
+            <ul class="nav-links">
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#locations">Locations</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#order">Order Now</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section class="hero">
-        <h1>Freshly Brewed, Always Delicious</h1>
-        <p>Sip into happiness with our handcrafted boba tea.</p>
-        <a href="#menu" class="cta-button">View Menu</a>
+        <h1>Delicious Boba Drinks</h1>
+        <p>Freshly made with love, just for you!</p>
+        <a href="#order" class="btn">Order Now</a>
     </section>
-    
-    <section id="menu">
-        <h2>Our Favorites</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="taro-boba.jpg" alt="Taro Boba">
-                <h3>Taro Milk Tea</h3>
+
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="https://via.placeholder.com/150" alt="Milk Tea">
+                <p>Milk Tea</p>
             </div>
-            <div class="menu-item">
-                <img src="matcha-boba.jpg" alt="Matcha Boba">
-                <h3>Matcha Latte</h3>
+            <div class="item">
+                <img src="https://via.placeholder.com/150" alt="Fruit Tea">
+                <p>Fruit Tea</p>
             </div>
-            <div class="menu-item">
-                <img src="brown-sugar-boba.jpg" alt="Brown Sugar Boba">
-                <h3>Brown Sugar Boba</h3>
+            <div class="item">
+                <img src="https://via.placeholder.com/150" alt="Smoothie">
+                <p>Smoothie</p>
             </div>
         </div>
     </section>
-    
+
+    <section id="locations" class="locations">
+        <h2>Find a Quickly Boba Near You</h2>
+        <p>Enter your location to find the closest Quickly Boba.</p>
+        <input type="text" placeholder="Enter city or zip code">
+        <button>Search</button>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Boba Bliss. All Rights Reserved.</p>
+        <p>&copy; 2025 Quickly Boba. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
