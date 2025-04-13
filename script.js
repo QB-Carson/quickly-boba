@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         searchBtn.addEventListener('click', () => {
             const query = locationInput.value.trim();
             if (query) {
-                // In a real app, this would be an API call
                 locationResults.innerHTML = `
                     <h3>Locations near ${query}</h3>
                     <div class="location">
@@ -55,8 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 locationResults.style.display = 'block';
-                
-                // Scroll to results
                 locationResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
@@ -66,14 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -84,11 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add fade-in animation to sections as they come into view
     const sections = document.querySelectorAll('section');
-    
-    const observerOptions = {
-        threshold: 0.1
-    };
-    
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -102,14 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Image lazy loading fallback
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-            img.src = img.dataset.src;
-        });
-    }
+    // Initialize directions button
+    initDirections();
 });
+
 // Add this to your existing JavaScript
 function initDirections() {
     const directionsBtn = document.createElement('button');
@@ -135,7 +121,6 @@ function getDirections() {
                 );
             },
             (error) => {
-                // Fallback if user denies location
                 window.open(
                     'https://www.google.com/maps/dir//22015+Main+St+UNIT+E,+Carson,+CA+90745',
                     '_blank'
@@ -143,13 +128,9 @@ function getDirections() {
             }
         );
     } else {
-        // Fallback for browsers without geolocation
         window.open(
             'https://www.google.com/maps/dir//22015+Main+St+UNIT+E,+Carson,+CA+90745',
             '_blank'
         );
     }
 }
-
-// Call this in your DOMContentLoaded event
-initDirections();
