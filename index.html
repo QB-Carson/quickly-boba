@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9DYJ9DZLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9DYJ9DZLR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D9DYJ9DZLR');
+    </script>
 
-  gtag('config', 'G-D9DYJ9DZLR');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quickly Boba - Premium Bubble Tea</title>
@@ -47,22 +47,48 @@
     </section>
 
     <section id="menu" class="menu">
-        <h2>Our House Favorites</h2>
-        <div class="menu-items">
-            <div class="item">
-                <img src="images/pop.png" alt="Pop Drink" loading="lazy">
-                <h3>Popcorn Chicken Bites</h3>
-                <p>Crispy, juicy bites packed with flavor</p>
+        <div class="container">
+            <h2>Our House Favorites</h2>
+            <p class="section-subtitle">Discover our most popular bubble tea creations</p>
+
+            <div class="full-menu-image">
+                <img src="images/menu.jpg" alt="Full Quickly Boba Menu" class="menu-image">
+                <a href="images/menu.jpg" class="view-full-menu" target="_blank">View Full Menu →</a>
             </div>
-            <div class="item">
-                <img src="images/tea.png" alt="Tea Drink" loading="lazy">
-                <h3>House Special Milk Tea</h3>
-                <p>Creamy, bold, and perfectly balanced blend</p>
-            </div>
-            <div class="item">
-                <img src="images/coc.png" alt="Coconut Drink" loading="lazy">
-                <h3>Cocoa Pebbles</h3>
-                <p>Chocolatey crunch in every sweet bite</p>
+
+            <div class="menu-items">
+                <div class="item">
+                    <div class="item-img-container">
+                        <img src="images/pop.png" alt="Popcorn Chicken Bites" loading="lazy">
+                    </div>
+                    <div class="item-content">
+                        <h3>Popcorn Chicken Bites</h3>
+                        <p>Crispy, juicy bites packed with flavor</p>
+                        <span class="price">$9.05</span>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item-img-container">
+                        <img src="images/tea.png" alt="House Special Milk Tea" loading="lazy">
+                    </div>
+                    <div class="item-content">
+                        <h3>House Special Milk Tea</h3>
+                        <p>Creamy, bold, and perfectly balanced blend</p>
+                        <span class="price">$4.90</span>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item-img-container">
+                        <img src="images/coc.png" alt="Cocoa Pebbles Drink" loading="lazy">
+                    </div>
+                    <div class="item-content">
+                        <h3>Cocoa Pebbles</h3>
+                        <p>Chocolatey crunch in every sweet bite</p>
+                        <span class="price">$5.60</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -71,17 +97,16 @@
         <div class="locations-container">
             <h2>Find Us</h2>
             <p>Come visit us at our flagship store in Carson, CA</p>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6628.825714315204!2d-118.27975872366481!3d33.827462029564956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd356cc003ffff%3A0xbbdb38be56b07317!2sQuickly%20Boba!5e0!3m2!1sen!2sus!4v1744576542093!5m2!1sen!2sus" 
-                width="100%" 
-                height="400" 
-                style="border:0; border-radius: 12px;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6628.825714315204!2d-118.27975872366481!3d33.827462029564956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd356cc003ffff%3A0xbbdb38be56b07317!2sQuickly%20Boba!5e0!3m2!1sen!2sus!4v1744576542093!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -95,22 +120,19 @@
             <div class="footer-logo">Quickly Boba</div>
             <div class="footer-links">
                 <a href="#">Store Number: (310) 200-0792 </a>
+                <p>22015 Main St UNIT E, Carson, CA 90745
+                </p>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/CarsonQuickly32/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <span>FB</span>
                 </a>
             </div>
-            
         </div>
         <p class="copyright">&copy; <span id="year"></span> Quickly Boba. All rights reserved.</p>
         <div style="position: footer: 10px; left: 40px; font-size: 12px; color: #0077B6;">
             Made by: Advait & Sameer
         </div>
-        
     </footer>
-    
-    
-    
 </body>
 </html>
